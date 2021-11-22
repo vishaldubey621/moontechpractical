@@ -1,0 +1,12 @@
+
+{
+  "todo": [
+    { "id": 1,
+       "title": "json-server",
+        "assignDate": "12-02=2021",
+        "duenDate": "15-02=2021",
+        "status" : "pending"
+      
+      }
+  ]
+}

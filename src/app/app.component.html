@@ -1,0 +1,22 @@
+<li><a routerLink="ListComponent" routerLinkActive="active">TODO LIST</a></li>
+
+<h2> MY TODO LIST</h2>
+<form [formGroup]="todolist" (ngSubmit)="onSubmit()">
+    TITTLE
+    <input type="text" formContrlName="title" placeholder="Enter title" required> <br>
+    ASSIGN DATE
+    <input type="date" formContrlName="assignDate" placeholder="Enter Assign Date" min="{{minDate}}" required> <br>
+
+    DUE DATE
+    <input type="date" formContrlName="dueDate" placeholder="Enter Due Date" required> <br>
+
+     <!-- SELECT STATUS :
+    <input type="text" formControlName="status" required > -->
+    <label for="website">Select status:</label>  
+    <select formControlName="status" class="form-control">  
+           
+            <option *ngFor="let item of status" value="item">{{item}}</option>
+    </select> <br>
+
+    <button type="submit">Add List</button>
+</form>

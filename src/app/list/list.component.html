@@ -1,0 +1,21 @@
+<router-outlet></router-outlet>
+
+<table>
+    <tr>
+        <th>UD</th>
+      <th>TITLE</th>
+      <th>ASSIGN DATE</th>
+      <th>DUE DATE</th>
+      <th>STATUS</th>
+    </tr>
+    <tr *ngFor="let data of allData">
+      <td>{{data.id}}</td>
+      <td>{{data.title}}</td>
+      <td>{{data.assignDate}}</td>
+      <td>{{data.dueDate}}</td>
+     <td>{{data.status}}</td>
+     <button (click)="deleteTask(data.id)" type="button" value="Delete" >Delete</button>
+     <button (click)="editTask(data)" type="button" value="Delete" >Edit</button>
+   
+    </tr>
+  </table>
